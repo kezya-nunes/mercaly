@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Mercally - Crie sua Conta</title>
+<link rel="stylesheet" href="https://cloudflare.com">
+<style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana,
+sans-serif;
+}
+body {
+display: flex;
+min-height: 100vh;
+background-color: #f7f3ed;
+}
+.left-side {
+flex: 1;
+background-color: #7A3D1D;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: #ffffff;
+padding: 40px;
+}
+.logo-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+}
+.logo-icon {
+width: 150px;
+height: 150px;
+border: 3px solid #ffffff;
+border-radius: 50%;
+
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 25px;
+}
+.logo-icon svg {
+width: 75px;
+height: 75px;
+fill: none;
+stroke: #ffffff;
+stroke-width: 2;
+}
+.brand-name {
+font-size: 42px;
+font-weight: bold;
+letter-spacing: 8px;
+text-transform: uppercase;
+}
+.right-side {
+flex: 1;
+background-color: #FAF6F0;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 40px;
+}
+.card-register {
+width: 100%;
+max-width: 480px;
+padding: 45px 40px;
+border-radius: 20px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+.card-register h1 {
+color: #1a1a1a;
+font-size: 32px;
+font-weight: 700;
+margin-bottom: 8px;
+}
+.subtitle {
+color: #555555;
+font-size: 15px;
+margin-bottom: 25px;
+
+}
+.form-group {
+margin-bottom: 18px;
+}
+.form-group label {
+display: block;
+margin-bottom: 6px;
+color: #333333;
+font-size: 14px;
+font-weight: 500;
+}
+.form-group input {
+width: 100%;
+padding: 12px 15px;
+border: 1.5px solid #A47551;
+border-radius: 10px;
+font-size: 15px;
+outline: none;
+background: transparent;
+transition: border-color 0.2s;
+}
+.form-group input:focus {
+border-color: #7A3D1D;
+}
+.password-wrapper {
+position: relative;
+display: flex;
+align-items: center;
+}
+.password-toggle {
+position: absolute;
+right: 15px;
+color: #888888;
+cursor: pointer;
+font-size: 16px;
+}
+.btn-submit {
+width: 100%;
+padding: 15px;
+background-color: #F3921F;
+color: #ffffff;
+
+border: none;
+border-radius: 12px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+margin: 15px 0 25px 0;
+box-shadow: 0 4px 15px rgba(243, 146, 31, 0.3);
+transition: background-color 0.2s, transform 0.1s;
+}
+.btn-submit:hover {
+background-color: #e28313;
+}
+.btn-submit:active {
+transform: scale(0.99);
+}
+.footer-text {
+text-align: center;
+font-size: 14px;
+color: #333333;
+}
+.footer-text a {
+color: #A47551;
+text-decoration: underline;
+font-weight: 500;
+display: inline-block;
+margin-top: 4px;
+}
+@media (max-width: 850px) {
+body {
+flex-direction: column;
+}
+.left-side {
+padding: 50px 20px;
+}
+.right-side {
+padding: 30px 20px;
+}
+.card-register {
+box-shadow: none;
+padding: 20px 10px;
+}
+}
+
+</style>
+</head>
+<body>
+<div class="left-side">
+<div class="logo-container">
+<div class="logo-icon">
+<svg viewBox="0 0 24 24">
+<path d="M3 22V10M21 22V10M2 10L4 4H20L22 10M9
+22V15H15V22" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M4 10C5.10457 10 6 9.10457 6 8C6 9.10457
+6.89543 10 8 10C9.10457 10 10 9.10457 10 8C10 9.10457 10.8954 10 12
+10C13.1046 10 14 9.10457 14 8C14 9.10457 14.8954 10 16 10C17.1046 10 18
+9.10457 18 8C18 9.10457 18.8954 10 20 10" stroke-linecap="round"/>
+</svg>
+</div>
+<div class="brand-name">Mercally</div>
+</div>
+</div>
+<div class="right-side">
+<div class="card-register">
+<h1>Crie sua conta!</h1>
+<p class="subtitle">Cadastre-se para começar a comprar</p>
+<form>
+<div class="form-group">
+<label for="name">Nome completo</label>
+<input type="text" id="name" required>
+</div>
+<div class="form-group">
+<label for="email">Email</label>
+<input type="email" id="email" required>
+</div>
+<div class="form-group">
+<label for="password">Senha</label>
+<div class="password-wrapper">
+<input type="password" id="password" required>
+<i class="fa-regular fa-eye
+password-toggle"></i>
+</div>
+</div>
+
+<div class="form-group">
+<label for="confirm-password">Confirmar
+senha</label>
+<div class="password-wrapper">
+<input type="password" id="confirm-password"
+required>
+<i class="fa-regular fa-eye
+password-toggle"></i>
+</div>
+</div>
+<button type="submit"
+class="btn-submit">Cadastrar</button>
+<div class="footer-text">
+Já tem uma conta?<br>
+<a href="#">Faça login</a>
+</div>
+</form>
+</div>
+</div>
+</body>
+</html>
